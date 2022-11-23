@@ -10,6 +10,7 @@ import { AddProduitComponent } from './add-produit/add-produit.component';
 import { UpdateProduitComponent } from './update-produit/update-produit.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RechercheParCategorieComponent } from './recherche-par-categorie/recherche-par-categorie.component';
+import { RechercheParNomComponent } from './recherche-par-nom/recherche-par-nom.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { RechercheParCategorieComponent } from './recherche-par-categorie/recher
     AddProduitComponent,
     UpdateProduitComponent,
     RechercheParCategorieComponent,
+    RechercheParNomComponent,
   ],
   imports: [
     BrowserModule,

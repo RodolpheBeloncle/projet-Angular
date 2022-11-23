@@ -1,18 +1,40 @@
 <div class="container">
-  <div class="col-sm-4 col-md-4 col-lg-4 mb-4">
-    <label>Categories </label>
-    <select
-      class="form-control form-control-lg"
-      id="idCat"
-      name="idCat"
-      [(ngModel)]="IdCategorie"
-      (change)="onChange()"
-    >
-      <option *ngFor="let cat of categories" value="{{ cat.idCat }}">
-        {{ cat.nomCat }}
-      </option>
-    </select>
-  </div>
+  <!-- <div class="col-sm-4 col-md-4 col-lg-4 mb-4">
+      <label>Categories </label>
+      <select
+        class="form-control form-control-lg"
+        id="idCat"
+        name="idCat"
+        [(ngModel)]="IdCategorie"
+        (change)="onChange()"
+      >
+        <option *ngFor="let cat of categories" value="{{ cat.idCat }}">
+          {{ cat.nomCat }}
+        </option>
+      </select>
+    </div> -->
+
+  <form class="form-inline">
+    <div class="form-group mx-sm-3 mb-2 mt-2">
+      <label>Nom Produit</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="nomProduit"
+        name="nomProduit"
+        class="form-control"
+        (change)="onChange(nomProduit)"
+      />
+      <!-- <button
+        type="submit"
+        (click)="rechercherProds()"
+        class="btn btn-primary mb-2 ml-2"
+      >
+        Rechercher
+      </button> -->
+    </div>
+  </form>
+
   <div class="card shadow mb-4">
     <div class="card-body">
       <table>
@@ -35,7 +57,7 @@
             <td>{{ produit?.prixProduit }}</td>
             <td>{{ produit?.dateCreation | date: "dd/MM/yyyy" }}</td>
             <td>{{ produit?.categorie?.nomCat }}</td>
-            <td>
+            <!-- <td>
               <a
                 class="btn btn-danger"
                 (click)="supprimerProduit(produit.idProduit)"
@@ -48,7 +70,7 @@
                 [routerLink]="['/updateProduit', produit.idProduit]"
                 >Editer</a
               >
-            </td>
+            </td> -->
           </tr>
         </tbody>
       </table>
