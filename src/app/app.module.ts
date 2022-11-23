@@ -11,6 +11,7 @@ import { UpdateProduitComponent } from './update-produit/update-produit.componen
 import { HttpClientModule } from '@angular/common/http';
 import { RechercheParCategorieComponent } from './recherche-par-categorie/recherche-par-categorie.component';
 import { RechercheParNomComponent } from './recherche-par-nom/recherche-par-nom.component';
+import { RechercheParNomOnKeyUpComponent } from './rechercheParNomOnKeyUp/rechercheParNomOnKeyUp.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,8 @@ import { RechercheParNomComponent } from './recherche-par-nom/recherche-par-nom.
     UpdateProduitComponent,
     RechercheParCategorieComponent,
     RechercheParNomComponent,
+    RechercheParNomOnKeyUpComponent
+   
   ],
   imports: [
     BrowserModule,
