@@ -6,12 +6,14 @@ import { UpdateProduitComponent } from './update-produit/update-produit.componen
 import { RechercheParCategorieComponent } from './recherche-par-categorie/recherche-par-categorie.component';
 import { RechercheParNomComponent } from './recherche-par-nom/recherche-par-nom.component';
 import { RechercheParNomOnKeyUpComponent } from './rechercheParNomOnKeyUp/rechercheParNomOnKeyUp.component';
+import { ListeCategoriesComponent } from './liste-categories/liste-categories.component';
 
 const routes: Routes = [
   { path: 'produits', component: ProduitsComponent },
   { path: 'addProduit', component: AddProduitComponent },
   { path: 'updateProduit/:id', component: UpdateProduitComponent },
   { path: 'rechercheParCategorie', component: RechercheParCategorieComponent },
+  { path: 'listeCategories', component: ListeCategoriesComponent },
   { path: 'rechercheParNom', component: RechercheParNomComponent },
   {
     path: 'rechercheParNomOnKeyUp',

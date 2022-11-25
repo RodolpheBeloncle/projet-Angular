@@ -12,6 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { RechercheParCategorieComponent } from './recherche-par-categorie/recherche-par-categorie.component';
 import { RechercheParNomComponent } from './recherche-par-nom/recherche-par-nom.component';
 import { RechercheParNomOnKeyUpComponent } from './rechercheParNomOnKeyUp/rechercheParNomOnKeyUp.component';
+import { SearchFilterPipe } from './search-filter.pipe';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ListeCategoriesComponent } from './liste-categories/liste-categories.component';
+import { UpdateCategorieComponent } from './update-categorie/update-categorie.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,10 @@ import { RechercheParNomOnKeyUpComponent } from './rechercheParNomOnKeyUp/recher
     UpdateProduitComponent,
     RechercheParCategorieComponent,
     RechercheParNomComponent,
-    RechercheParNomOnKeyUpComponent
+    RechercheParNomOnKeyUpComponent,
+    SearchFilterPipe,
+    ListeCategoriesComponent,
+    UpdateCategorieComponent
    
   ],
   imports: [
@@ -30,6 +37,7 @@ import { RechercheParNomOnKeyUpComponent } from './rechercheParNomOnKeyUp/recher
     NgbModule,
     FormsModule,
     HttpClientModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent],

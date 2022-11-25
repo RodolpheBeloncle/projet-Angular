@@ -84,4 +84,9 @@ export class ProduitService {
       return this.http.get<Produit[]>(url);
    }
 
+   // add new categorie
+   ajouterCategorie( cat: Categorie):Observable<Categorie>{
+    return this.http.post<Categorie>(apiURLCat, cat, httpOptions);
+    }
+
 }

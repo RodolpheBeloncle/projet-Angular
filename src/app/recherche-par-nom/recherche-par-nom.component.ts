@@ -13,6 +13,7 @@ export class RechercheParNomComponent implements OnInit {
   IdCategorie!: number;
   categories!: Categorie[];
   nomProduit!: string;
+  searchTerm!: string;
 
   constructor(private produitService: ProduitService) {
     // each initialization of produits by produit service
@@ -20,7 +21,10 @@ export class RechercheParNomComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.chargerProduits();
+    this.produitService.listeProduit().subscribe((prods) => {
+      console.log(prods);
+      this.produits = prods;
+    });
   }
 
   // get list of produit (refresh page )
